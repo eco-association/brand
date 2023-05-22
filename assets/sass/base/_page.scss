@@ -1,0 +1,28 @@
+.page_title {
+    padding-bottom: var(--size-m);
+    padding-top: var(--size-m);
+    border-bottom: 1px solid var(--surface-secondary-foreground-xlight);
+    margin-bottom: var(--size-m);
+    font-size: 24px;
+    line-height: 1;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    backdrop-filter: blur(8px);
+
+    &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: var(--surface-secondary);
+        content: "";
+        opacity: 0.95;
+    }
+
+    > span {
+        position: relative;
+        z-index: 1;
+    }
+}

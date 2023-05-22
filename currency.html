@@ -1,0 +1,36 @@
+---
+layout: default
+selected: currency
+assets:
+    -   name: ECO Token Illustration
+        description: Represents the ECO Token.
+        poster: asset-ecoorg-currency-ecotoken-poster.png
+        sources:
+            -   url: currency/eco-token.png
+                filetype: .png
+            
+    -   name: ECOx Token Illustration
+        description: Represents the ECOx Token.
+        poster: asset-ecoorg-currency-ecox-token-poster.png
+        sources:
+            -   url: currency/ecox-token.png
+                filetype: .png
+
+    -   name: 3D Coins Illustration
+        description: 3d coins illustration.
+        poster: asset-ecoorg-currency-3d-token-poster.png
+        sources:
+            -   url: currency/eco-token-3d.png
+                filetype: .png
+            
+---
+
+<h1 class="page_title">
+    <span>Currency</span>
+</h1>
+
+<div class="assetGroup">
+    {% for item in page.assets %}
+    {% include asset.html %}
+    {% endfor %}  
+</div>

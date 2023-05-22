@@ -1,0 +1,23 @@
+
+
+$surfaceSecondary: #fff;
+$surfaceSecondaryForeground: #000;
+$surfaceSecondaryAccent: rgb(6, 36, 223);
+
+$purple: #6F8EFF;
+$teal: #95E8DA;
+$yellow: #FFDD50; 
+
+:root {
+    --surface-secondary: #{$surfaceSecondary};
+    --surface-secondary-foreground: #{$surfaceSecondaryForeground};
+    --surface-secondary-accent: #{$surfaceSecondaryAccent};
+    --surface-secondary-foreground-medium: #{mix($surfaceSecondary, $surfaceSecondaryForeground)};
+    --surface-secondary-foreground-light: #{mix($surfaceSecondary, $surfaceSecondaryForeground, 85%)};
+    --surface-secondary-foreground-xlight: #{mix($surfaceSecondary, $surfaceSecondaryForeground, 95%)};
+    --surface-secondary-foreground-xxlight: #{mix($surfaceSecondary, $surfaceSecondaryForeground, 98%)};
+
+    --color-teal: #{$teal};
+    --color-purple: #{$purple};
+    --color-yellow: #{$yellow};
+}

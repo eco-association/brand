@@ -1,0 +1,51 @@
+/**
+ * Set up a decent box model on the root element
+ */
+html {
+    box-sizing: border-box;
+}
+
+/**
+ * Make all elements from the DOM inherit from the parent box-sizing
+ * Since `*` has a specificity of 0, it does not override the `html` value
+ * making all elements inheriting from the root box-sizing value
+ * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+*,
+::before,
+::after {
+    box-sizing: inherit;
+}
+
+/**
+
+Site layout
+
+**/
+
+
+.container {
+    display: grid;
+    grid-template-areas: ". . ."
+        ". main ."
+        ". footer .";
+    grid-template-rows: 1fr 80vh 1fr;
+    grid-template-columns: 1fr min(80vw, 920px) 1fr;
+    width: 100%;
+    height: 100vh;
+}
+
+.main {
+    grid-area: main;
+    overflow: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+.nav {
+    width: min(20vw, 260px);
+}

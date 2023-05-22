@@ -1,0 +1,29 @@
+---
+layout: default
+selected: fonts
+assets:
+    -   name: Rubik
+        description: Eco Org primary brand font
+        poster: asset-ecoorg-font-rubik-poster.svg
+        sources:
+            -   url: fonts/Rubik.zip
+                filetype: .zip
+    -   name: PTSerif
+        description: Eco Org secondary brand font
+        poster: asset-ecoorg-font-ptserif-poster.svg
+        sources:
+            -   url: fonts/PTSerif.zip
+                filetype: .zip
+---
+
+<h1 class="page_title">
+    <span>Fonts</span>
+</h1>
+
+<div class="assetGroup">
+
+    {% for item in page.assets %}
+    {% include asset.html %}
+    {% endfor %}
+    
+</div>

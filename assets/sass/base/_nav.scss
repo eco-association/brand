@@ -1,0 +1,98 @@
+.nav {
+    padding: var(--size-gutter-small);
+    background-color: var(--surface-secondary-foreground-xxlight);
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    &:before {
+        z-index: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        content: "";
+        background: conic-gradient(from 224.74deg at 50% 50%, var(--color-purple) -95.32deg, #95E8DA 38.85deg, var(--color-yellow) 168.42deg, var(--color-purple) 264.68deg, var(--color-teal) 398.85deg);
+        mix-blend-mode: color-burn;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        flex-grow: 1;
+    }
+
+    li {
+        padding: 0;
+        display: block;
+        margin-bottom: var(--size-xs);
+    }
+    
+    .nav_link {
+        padding: 8px 16px;
+        display: block;
+        text-decoration: none;
+        color: var(--surface-secondary-forgeground);
+        position: relative;
+
+        &:hover:after,
+        &.selected:after {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        &.selected:after {
+            background-color: var(--surface-secondary-accent);
+            opacity: 0.06;
+        }
+
+        span {
+            position: relative;
+            z-index: 1;
+        }
+
+        &:after {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            background-color: var(--surface-secondary-foreground-xlight);
+            content: "";
+            opacity: 0;
+            z-index: 0;
+            border-radius: 4px;
+            transform: scale(0.9);
+            will-change: transform, opacity;
+            transition: transform ease 120ms, opacity ease-out 80ms;
+        }
+
+        &.selected {
+            color: var(--surface-secondary-accent);
+        }
+    }
+}
+
+.nav_logo {
+    padding: var(--size-gutter-normal);
+    padding-top: var(--size-gutter-small);
+    border-bottom: 1px solid var(--surface-secondary-foreground-xlight);
+    margin-bottom: var(--size-gutter-normal);
+    height: 24px;
+    display: flex;
+    align-items: center;
+    box-sizing: content-box;
+    position: relative;
+}
+
+.nav_logo svg {
+    height: 18px;
+    display: block;
+
+    path {
+        fill: var(--surface-secondary-foreground-medium);
+    }
+}

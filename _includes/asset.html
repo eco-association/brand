@@ -1,0 +1,26 @@
+{% capture poster_url %}/assets/images/{{ item.poster }}{% endcapture %}
+
+<div class="asset {% if include.size == 'small' %}asset-small{% endif %}">
+    {% if include.title or item.name %}
+    <h2 class="asset_title">{{ include.title | default: item.name }}</h2>
+    {% endif %}
+    <div class="asset_poster {% if item.colorMode == 'dark' %}dark{% else %}light{% endif %}">
+        <img src="{% if include.poster_url %}{{ include.poster_url }}{% else %}{{ poster_url | relative_url }}{% endif %}" />
+    </div>
+    
+    <p class="asset_description">{{ include.description | default: item.description }}</p>
+    <div class="buttonGroup">
+        {% capture button_title %}{{ include.button_title | default: "Download" }}{% endcapture %}
+        {% if include.source_url %}
+            {% include button.html title=button_title label=include.source_type href=include.source_url %}
+        {% endif %}
+        {% for source in item.sources %}
+            {% capture source_url %}/assets/downloads/{{ source.url }}{% endcapture %}
+            {% capture relative_url %}{{ source_url | relative_url }}{% endcapture %}
+            {% include button.html title=button_title label=source.filetype href=relative_url %}
+        {% endfor %}
+        {% if item.copySrc %}
+            {% include button.html copySrc=item.copySrc title="Copy as SVG" label=source.filetype href=relative_url %}
+        {% endif %}
+    </div>
+</div>

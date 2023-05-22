@@ -1,0 +1,51 @@
+---
+layout: default
+selected: index
+assets:
+    -   name: Logo black
+        description: Eco Org logo.
+        poster: asset-ecoorg-logo-icon-black-poster.svg
+        sources:
+            -   url: logos/eco-org-logo-black.svg
+                filetype: .svg
+            -   url: logos/eco-org-logo-black.png
+                filetype: .png
+    -   name: Logo white
+        description: Eco Org logo.
+        poster: asset-ecoorg-logo-icon-white-poster.svg
+        colorMode: dark
+        sources:
+            -   url: logos/eco-org-logo-white.svg
+                filetype: .svg
+            -   url: logos/eco-org-logo-white.png
+                filetype: .png
+    -   name: Brandmark black
+        description: Eco Org brandmark.
+        poster: asset-ecoorg-logo-brandmark-black-poster.svg
+        sources:
+            -   url: logos/eco-org-brandmark-black.svg
+                filetype: .svg
+            -   url: logos/eco-org-brandmark-black.png
+                filetype: .png
+    -   name: Brandmark white
+        description: Eco Org brandmark.
+        poster: asset-ecoorg-logo-brandmark-white-poster.svg
+        colorMode: dark
+        sources:
+            -   url: logos/eco-org-brandmark-white.svg
+                filetype: .svg
+            -   url: logos/eco-org-brandmark-white.png
+                filetype: .png
+---
+
+<h1 class="page_title">
+    <span>Logo</span>
+</h1>
+
+<div class="assetGroup">
+
+    {% for item in page.assets %}
+    {% include asset.html %}
+    {% endfor %}
+    
+</div>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: page.lang | default: 'en' }}">
+
+  {% include head.html %}
+
+  <body>
+    <div class="container">
+      <main class="main">
+        <div class="nav">
+          <div class="nav_logo">
+            {% include logo.html %}              
+          </div>
+          <ul>
+            <li>
+              <a href="{{ '/' | relative_url }}" class="nav_link {% if page.selected == 'index'%}selected{% endif %}"><span>Logo</span></a>
+            </li>
+            <li>
+              <a href="{{ '/illustrations' | relative_url }}" class="nav_link {% if page.selected == 'illustrations'%}selected{% endif %}"><span>Illustrations</span></a>
+            </li>
+            <li>
+              <a href="{{ '/fonts' | relative_url }}" class="nav_link {% if page.selected == 'fonts'%}selected{% endif %}"><span>Fonts</span></a>
+            </li>
+            <li>
+              <a href="{{ '/colors' | relative_url }}" class="nav_link {% if page.selected == 'colors'%}selected{% endif %}"><span>Colors</span></a>
+            </li>
+            <li>
+              <a href="{{ '/backgrounds' | relative_url }}" class="nav_link {% if page.selected == 'backgrounds'%}selected{% endif %}"><span>Backgrounds</span></a>
+            </li>
+            <li>
+              <a href="{{ '/currency' | relative_url }}" class="nav_link {% if page.selected == 'currency'%}selected{% endif %}"><span>Currency</span></a>
+            </li>
+          </ul>
+          <div class="nav_footer">
+            <a href="mailto:pete@eco.com" class="button muted"><span>Give feedback</span></a>
+          </div>
+        </div>
+        <div class="content">
+          {{ content }}
+        </div>
+      </main>
+      <div class="footer">
+        <p>&copy; 2023 Eco.org</p>
+      </div>
+    </div>
+
+    <div class="toast-container"></div>
+
+  </body>
+  <script src="{{ '/assets/js/app.js' | relative_url }}"></script>
+</html>

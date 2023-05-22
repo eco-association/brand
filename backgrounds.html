@@ -1,0 +1,33 @@
+---
+layout: default
+selected: backgrounds
+assets:
+    -   name: Blue Background
+        description: Eco Org branded background.
+        poster: asset-ecoorg-bkg-blue-poster.png
+        sources:
+            -   url: backgrounds/eco-org-bkg-blue.png
+                filetype: .png
+    -   name: Yellow Background
+        description: Eco Org branded background.
+        poster: asset-ecoorg-bkg-yellow-poster.png
+        sources:
+            -   url: backgrounds/eco-org-bkg-yellow.png
+                filetype: .png
+    -   name: Brown Background
+        description: Eco Org branded background.
+        poster: asset-ecoorg-bkg-brown-poster.png
+        sources:
+            -   url: backgrounds/eco-org-bkg-brown.png
+                filetype: .png
+---
+
+<h1 class="page_title">
+    <span>Backgrounds</span>
+</h1>
+
+<div class="assetGroup">
+    {% for item in page.assets %}
+    {% include asset.html %}
+    {% endfor %}  
+</div>

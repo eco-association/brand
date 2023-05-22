@@ -1,0 +1,3 @@
+<a class="button {% if include.copySrc %}js-copy{% endif %}" target="_blank" href="{{ include.href }}" {% if include.copySrc %}data-copy-text="{{ include.copySrc }}"{% endif %}>
+    <span><span>{{ include.title | default: "Download" }}</span> {% if include.label %}<span class="button_label">{{ include.label }}</span>{% endif %}</span>
+</a>

@@ -1,0 +1,16 @@
+
+$size-xs: 4px;
+$size-s: 8px;
+$size-m: 16px;
+$size-l: 32px;
+$size-xl: 64px;
+
+:root {
+    --size-xs: #{$size-xs};
+    --size-s: #{$size-s};
+    --size-m: #{$size-m};
+    --size-l: #{$size-l};
+
+    --size-gutter-normal: #{$size-m};
+    --size-gutter-small: #{$size-s};
+}

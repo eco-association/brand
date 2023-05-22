@@ -1,0 +1,67 @@
+---
+layout: default
+selected: colors
+assets:
+    -   name: Teal
+        hex: CFE5E0
+        r: 205
+        g: 229
+        b: 224
+    -   name: Yellow
+        hex: FCEF63
+        r: 252
+        g: 239
+        b: 99
+    -   name: Orange
+        hex: D6B658
+        r: 214
+        g: 182
+        b: 88
+    -   name: Blue
+        hex: 2657A8
+        r: 38
+        g: 87
+        b: 156
+    -   name: Purple
+        hex: 6363AA
+        r: 99
+        g: 99
+        b: 170
+    -   name: Brown
+        hex: 924F35
+        r: 146
+        g: 79
+        b: 53
+    -   name: Dark Gray
+        hex: 27292E
+        r: 39
+        g: 41
+        b: 46
+    -   name: Gray
+        hex: 6D7079
+        r: 109
+        g: 112
+        b: 121
+    -   name: Light Gray
+        hex: BCBDBF
+        r: 188
+        g: 189
+        b: 191
+    -   name: Off White
+        hex: FFFFFB
+        r: 255
+        g: 255
+        b: 251
+---
+
+<h1 class="page_title">
+    <span>Brand Colors</span>
+</h1>
+
+<div class="assetGroup">
+
+    {% for item in page.assets %}
+    {% include color-swatch.html %}
+    {% endfor %}
+    
+</div>

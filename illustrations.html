@@ -1,0 +1,53 @@
+---
+layout: default
+selected: illustrations
+assets:
+    -   name: Butterfly Illustration
+        description: Eco Org branded illustrations.
+        poster: asset-ecoorg-illustration-butterfly-poster.png
+        sources:
+            -   url: illustrations/eco-org-butterfly.png
+                filetype: .png
+    -   name: Field Illustration
+        description: Eco Org branded illustrations.
+        poster: asset-ecoorg-illustration-field-poster.png
+        sources:
+            -   url: illustrations/eco-org-field.png
+                filetype: .png
+    -   name: Flower Illustration
+        description: Eco Org branded illustrations.
+        poster: asset-ecoorg-illustration-flower-poster.png
+        sources:
+            -   url: illustrations/eco-org-flower.png
+                filetype: .png
+    -   name: Helix Illustration
+        description: Eco Org branded illustrations.
+        poster: asset-ecoorg-illustration-helix-poster.png
+        sources:
+            -   url: illustrations/eco-org-helix.png
+                filetype: .png
+    -   name: Sine Wave Illustration
+        description: Eco Org branded illustrations.
+        poster: asset-ecoorg-illustration-sine-poster.png
+        sources:
+            -   url: illustrations/eco-org-sine.png
+                filetype: .png
+    -   name: Spiral Illustration
+        description: Eco Org branded illustrations.
+        poster: asset-ecoorg-illustration-spiral-poster.png
+        sources:
+            -   url: illustrations/eco-org-spiral.png
+                filetype: .png
+---
+
+<h1 class="page_title">
+    <span>Illustrations</span>
+</h1>
+
+<div class="assetGroup">
+
+    {% for item in page.assets %}
+    {% include asset.html %}
+    {% endfor %}
+    
+</div>

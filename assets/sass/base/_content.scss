@@ -1,0 +1,16 @@
+
+
+.main {
+    background: var(--surface-secondary);
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 18px;
+}
+
+.content {
+    padding-left: var(--size-gutter-normal);
+    padding-right: var(--size-gutter-normal);
+    padding-bottom: var(--size-gutter-normal);
+    flex-grow: 1;
+    overflow: auto;
+}

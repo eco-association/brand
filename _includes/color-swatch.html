@@ -1,0 +1,15 @@
+<div class="asset color">
+    <h2 class="asset_title">{{ item.name }}</h2>
+    <div class="asset_poster">
+        <div class="asset_colorSwatch" style="background-color: #{{ item.hex }}"></div>
+    </div>
+    <p class="asset_description"><strong>Hex:</strong> #{{ item.hex }} • R: {{ item.r }} G: {{ item.g }} B: {{ item.b }}</p>
+    <div class="buttonGroup">
+        <a class="button" data-copy-text="#{{ item.hex }}">
+            <span>Copy <span class="button_label">hex</span></span>
+        </a>
+        <a class="button" data-copy-text="rgb({{ item.r }}, {{ item.g }}, {{ item.b }})">
+            <span>Copy <span class="button_label">rgb</span></span>
+        </a>
+    </div>
+</div>
