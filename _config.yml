@@ -2,8 +2,8 @@
 title: Eco Brand Guide
 description: > # this means to ignore newlines until "baseurl:"
   Simple Eco Brand Site
-baseurl: "/brand-site" # the subpath of your site, e.g. /blog
-url: "https://brand.eco.com" # the base hostname & protocol for your site
+baseurl: "/brand" # the subpath of your site, e.g. /blog
+url: "https://brand.eco.org" # the base hostname & protocol for your site
 
 # Markdown settings
 markdown: kramdown
