@@ -1,7 +1,7 @@
 # Site settings
-title: Eco Brand Guide
+title: Eco.org Brand Guide
 description: > # this means to ignore newlines until "baseurl:"
-  Simple Eco Brand Site
+  Simple Eco.org Brand Site
 baseurl: "/brand" # the subpath of your site, e.g. /blog
 url: "https://brand.eco.org" # the base hostname & protocol for your site
 
